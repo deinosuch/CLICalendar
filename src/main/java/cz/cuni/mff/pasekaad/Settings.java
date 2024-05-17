@@ -8,28 +8,28 @@ public class Settings {
     private static String mail;
     private static Scanner scanner;
 
-    public static void run() {
-        scanner = new Scanner(System.in);
+    public static void run(Scanner scnr) {
+        scanner = scnr;
         int input;
 
         do {
             System.out.println("Calendar settings");
-            System.out.println("Select what you would like to change/see by typing given number");
-            System.out.println("1. Personal settings");
-            System.out.println("2. Reminder settings");
-            System.out.println(EXIT_CODE + ". Exit");
+            System.out.println("Select option by typing given number"
+                             + "1. Personal settings"
+                             + "2. Reminder settings"
+                             + EXIT_CODE + ". Exit");
 
             input = scanner.nextInt();
             scanner.nextLine();
     
             switch (input) {
+                case EXIT_CODE:
+                    break;
                 case 1:
                     personal();
                     break;
                 case 2:
                     reminder();
-                    break;
-                case EXIT_CODE:
                     break;
                 default:
                     System.out.println("Invalid choice. Please choose a valid option.");
