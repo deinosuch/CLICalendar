@@ -1,7 +1,7 @@
-package cz.cuni.pasekaad;
+package cz.cuni.mff.pasekaad;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Settings.run();
     }
 }
